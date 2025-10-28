@@ -16,12 +16,17 @@ before:
     - go generate ./...
 
 builds:
-  - env:
+  - main: ./main.go
+    binary: nato
+    env:
       - CGO_ENABLED=0
     goos:
       - linux
       - windows
       - darwin
+    goarch:
+      - amd64
+      - arm64
 
 archives:
   - formats: [tar.gz]
@@ -48,8 +53,8 @@ changelog:
 release:
   github:
     owner: Narven
-    name: https://github.com/Narven/nato
-  draft: true
+    name: nato
+  draft: false
   # target_commitish: "{{ .Commit }}"
   make_latest: true
   footer: >-
