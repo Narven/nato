@@ -15,7 +15,14 @@ nato TW11 5BA
 
 ## Installation
 
-### macOS
+### Homebrew (macOS)
+
+```sh
+brew tap Narven/tap
+brew install nato
+```
+
+### Manual Installation (macOS)
 
 If you see a Gatekeeper warning about malware:
 
