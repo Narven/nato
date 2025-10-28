@@ -48,7 +48,7 @@ func main() {
 
 	argsWithoutProg := os.Args[1:]
 	if len(argsWithoutProg) == 0 {
-		fmt.Println("Usage: go run main.go <sentence>")
+		fmt.Println("Usage: nato <sentence>")
 		return
 	}
 	// Join all arguments together, ignoring whitespace between them

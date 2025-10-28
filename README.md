@@ -4,12 +4,12 @@ Nato is a tiny CLI tool that converts words in to NATO phonetic alphabet
 
 ## Usage
 
-`go run main.go <sentence>`
+`nato <sentence>`
 
 ```sh
-go run main.go 123
+nato 123
 # One Two Three
-go run main.go TW11 5BA
+nato TW11 5BA
 # Tango Whiskey One One Five Bravo Alfa
 ```
 
