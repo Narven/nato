@@ -28,6 +28,25 @@ builds:
       - amd64
       - arm64
 
+# Sign macOS binaries (ad-hoc signing - free but may still show Gatekeeper warning)
+# For proper signing that avoids Gatekeeper warnings completely, you'll need:
+# - Apple Developer account ($99/year)
+# - Codesigning certificate exported to APPLE_CERTIFICATE env var
+#   Then change --sign=- to --sign="Developer ID Application: Your Name (TEAM_ID)"
+signs:
+  - cmd: codesign
+    args:
+      - "--sign=-"
+      - "--force"
+      - "--options=runtime"
+      - "--timestamp"
+      - "${artifact}"
+    artifacts: binary
+    signature: none
+    ids:
+      - nato_darwin_amd64
+      - nato_darwin_arm64
+
 archives:
   - formats: [tar.gz]
     # this name template makes the OS and Arch compatible with the results of `uname`.
