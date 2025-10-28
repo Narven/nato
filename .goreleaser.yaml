@@ -69,6 +69,20 @@ changelog:
       - "^docs:"
       - "^test:"
 
+# Homebrew tap - uncomment after creating the homebrew-tap repository
+# brews:
+#   - name: nato
+#     description: CLI tool that converts words to NATO phonetic alphabet
+#     homepage: "https://github.com/Narven/nato"
+#     license: "MIT"
+#     repository:
+#       owner: Narven
+#       name: homebrew-tap
+#     # Optional: set commit author (defaults to GoReleaser)
+#     commit_author:
+#       name: goreleaserbot
+#       email: goreleaser@carlosbecker.com
+
 release:
   github:
     owner: Narven
