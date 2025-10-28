@@ -51,7 +51,8 @@ func main() {
 		fmt.Println("Usage: go run main.go <sentence>")
 		return
 	}
-	sentence := argsWithoutProg[0]
+	// Join all arguments together, ignoring whitespace between them
+	sentence := strings.Join(argsWithoutProg, "")
 
 	result := []string{}
 
