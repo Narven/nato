@@ -46,6 +46,12 @@ changelog:
       - "^test:"
 
 release:
+  github:
+    owner: Narven
+    name: https://github.com/Narven/nato
+  draft: true
+  # target_commitish: "{{ .Commit }}"
+  make_latest: true
   footer: >-
 
     ---
